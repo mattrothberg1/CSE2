@@ -33,14 +33,14 @@ public class BigMacAgain {
             System.out.println("You ordered " + input1$ + " Big Macs for a cost of " + input1$ + "x2.22 = $" + (output2$*2.22));
             
          }
-         
+         //if int is < 0
          else {
             System.out.println("You did not enter a number > 0");
             return;
             
          }
          }
-       
+       //if no int
         else {
             System.out.println("you did not enter an int");
             return;   //leaves the program, i.e.
@@ -78,7 +78,7 @@ public class BigMacAgain {
              
          }
         }
-         
+         //else statement 
          else{
             System.out.println("You did not enter one of 'y', 'Y', 'N', 'n'");
             return;
