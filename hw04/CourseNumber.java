@@ -72,7 +72,9 @@ public class CourseNumber {
              
              
          }
-           
+         else if (term != 10 || term != 20 || term != 30 || term != 40)  {
+             System.out.println(term + " is not a legitimate semester");
+         }
          
          }
          }
