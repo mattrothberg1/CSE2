@@ -61,12 +61,12 @@ while(scan1.length()>1){ //checking input length
     
 }
 while(scan1.charAt(0)!=input.charAt(0)&&scan1.charAt(0)!=input.charAt(1)&&scan1.charAt(0)!=input.charAt(2)&&scan1.charAt(0)!=input.charAt(3)){ //while too many characteres
-        if(counter==x){ //if counter reaches max
+        if(counter==x){ //if counter reaches max *
         return(' '); //stop program
         
     }
     counter++; //increase counter
-    System.out.print("Try again - "); //try again if bad input
+    System.out.print("You did not enter a character from the list 'yYnN'; Try again - "); //try again if bad input
     scan1 = scan.next(); //redo program
     
 }
