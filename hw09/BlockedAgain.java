@@ -26,19 +26,19 @@ public class BlockedAgain{
     public static int checkint(Scanner scan){ //second method 
        
        int result = 0; //declaring variable
-        if(scan.hasNextInt()){ //checking if input is an int
-             result = scan.nextInt(); //if it is, set it to result
-            return result; //then return that result 
+        
+        while(!scan.hasNextInt()){
+            System.out.print("YOu did not enter an int, try again: ");
+            scan.next();
         }
-        else{
-            System.out.println("You did not enter an int, try again: "); //If bad input 
-            result = getInt(); //calling upon getint method
-            return result; //returning variable
-        }
+       result = scan.nextInt();
+       return result;
     }
 
     public static int checkRange(int input){ //third method
         int result = 0; //declaring variable
+
+        
         if(input >0 && input < 10){ //if input is in range
             result = input; //set input equal to return if in range
             return result; //return value
@@ -53,10 +53,16 @@ public class BlockedAgain{
     
     
     public static void allBlocks(int input){ //method if all inputs are good
-			if(input>0 && input<10) { //checking if int is in the correct range
+			
+		block(input);	
+		 
 
-		System.out.println("Program 1, using for Statements: ");
-		System.out.println("");
+	
+
+			  
+    }
+    
+    public static void block(int input){
        for(int j=1;j<input+1;j++){ //outside for loop
 	    for(int k=0;k<j; k++){ //second for loop
 	    			    for( int u=input; u>j; u--) { //printing out spacing
@@ -72,15 +78,20 @@ public class BlockedAgain{
 	    }
 	    		    for( int u=input; u>j; u--) { //for loop for spacing
 		    	System.out.print(" "); //spacing
+		    	
 		    }
-	for(int k=0; k<j-1; k++) { //for loop for dashes
+		    
+        line(j);
+    }
+    }
+    public static void line(int j){
+        	for(int k=0; k<j-1; k++) { //for loop for dashes
 		System.out.print("--");
 	}
 	System.out.println("-"); //dashes
 	    
     } 
-			}   
-    }
+        
     
     
     
